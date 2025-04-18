@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white shadow-md py-2"
+          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -42,17 +42,17 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/ad45afbc-342c-4c3d-9068-86059fab2b95.png" 
             alt="SKO_BOX Logo" 
-            className="h-12 w-auto"
+            className="h-14 w-14 rounded-full object-cover border-2 border-skobox-yellow"
           />
         </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="font-medium text-skobox-black hover:text-skobox-yellow transition-colors duration-200"
+                className="font-medium text-skobox-black hover:text-skobox-yellow transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-skobox-yellow after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {link.name}
               </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white"
+          className="md:hidden bg-white/90 backdrop-blur-md"
         >
           <div className="container-custom py-4">
             <ul className="flex flex-col space-y-4">
