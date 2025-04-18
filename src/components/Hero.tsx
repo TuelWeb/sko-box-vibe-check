@@ -25,7 +25,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/ad45afbc-342c-4c3d-9068-86059fab2b95.png" 
               alt="SKO_BOX Logo" 
-              className="h-32 w-auto mb-6"
+              className="h-32 w-32 rounded-full object-cover border-4 border-skobox-yellow mb-6"
             />
           </motion.div>
           

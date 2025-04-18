@@ -31,11 +31,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
-          : "bg-transparent py-4"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 
+        ${isScrolled 
+          ? "bg-white/90 backdrop-blur-md shadow-md py-2" 
+          : "bg-white/70 backdrop-blur-sm py-4"
+        }`}
     >
       <div className="container-custom flex justify-between items-center">
         <a href="#hero" className="flex items-center">
