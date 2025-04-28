@@ -19,6 +19,9 @@ const Temp404Overlay = ({ onClose }: Temp404OverlayProps) => {
         <p className="text-xl text-gray-200 mb-6">
           Cette page n'existe pas ou n'est plus disponible
         </p>
+        <div className="text-sm text-gray-400 mb-4">
+          Pour activer le site, définissez SHOW_404_OVERLAY sur false dans le fichier Index.tsx
+        </div>
         <button
           onClick={onClose}
           className="bg-skobox-yellow text-black px-6 py-3 rounded-md font-medium flex items-center mx-auto"

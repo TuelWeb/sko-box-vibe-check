@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -19,8 +18,14 @@ const Index = () => {
     document.title = "SKO_BOX - Vêtements de marque à prix cassés sur Vinted";
   }, []);
 
+  // This function won't actually change the state anymore
+  // It's kept for compatibility with the component props
   const handleCloseOverlay = () => {
-    setShowOverlay(false);
+    // Only allow closing if SHOW_404_OVERLAY is false
+    if (!SHOW_404_OVERLAY) {
+      setShowOverlay(false);
+    }
+    // Otherwise do nothing, keeping the overlay visible
   };
 
   return (
