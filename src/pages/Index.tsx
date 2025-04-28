@@ -25,13 +25,18 @@ const Index = () => {
 
   return (
     <>
-      {showOverlay && <Temp404Overlay onClose={handleCloseOverlay} />}
-      <Navbar />
-      <Hero />
-      <Concept />
-      <Products />
-      <Social />
-      <Footer />
+      {showOverlay ? (
+        <Temp404Overlay onClose={handleCloseOverlay} />
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Concept />
+          <Products />
+          <Social />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
